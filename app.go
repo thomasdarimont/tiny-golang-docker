@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/treeder/easy-go-in-docker/Godeps/_workspace/src/github.com/gorilla/mux"
+	"github.com/gorilla/mux"
 )
 
 func main() {
@@ -18,6 +18,7 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
+// Hello endpoint returns a Greeting message
 func Hello(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintln(w, "Hello world!")
 }
